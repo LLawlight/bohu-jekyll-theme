@@ -1,0 +1,54 @@
+{% if page.nocomments %}
+{% else %}
+{% if site.disqus_shortname %}
+<div class="post-comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      var disqus_shortname = '{{ site.disqus_shortname }}'; // required: replace example with your forum shortname
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+</div>
+{% endif %}
+{% if site.duoshuo_shortname %}
+<div class="post-comments">
+<!-- 多说分享代码 start -->
+    <div class="ds-share" data-thread-key="{{ page.id }}" data-title="{{ page.title }}" data-images="https://avatars0.githubusercontent.com/u/17525377?v=3&s=460" data-content="——Clark Zhao的博客" data-url="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <div class="ds-share-inline">
+      <ul  class="ds-share-icons-16">
+        
+        <li>分享到：</li>
+        <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+        <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+        <li><a class="ds-qq" href="javascript:void(0);" data-service="qq">QQ</a> </li>
+        <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+        
+      </ul>
+      <div class="ds-share-icons-more">
+      </div>
+    </div>
+ </div>
+    <!-- 多说分享代码 end -->
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="{{ page.id }}" data-title="{{ page.title }}" data-url="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"></div>
+    <!-- 多说评论框 end -->
+    
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"{{ site.duoshuo_shortname }}"};
+      (function() {
+      	var ds = document.createElement('script');
+      	ds.type = 'text/javascript';ds.async = true;
+      	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      	ds.charset = 'UTF-8';
+      	(document.getElementsByTagName('head')[0] 
+      	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
+      </script>
+    <!-- 多说公共JS代码 end -->
+</div>
+{% endif %}
+{% endif %}

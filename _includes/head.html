@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{% if page.title %}{{ page.title }} « {{ site.title }}{% else %}{{ site.title }}{% endif %}|{{ site.author }}的博客</title>
+  <link rel="shortcut icon" type="image/x-icon" href="{{ "/assets/favicon.jpg" | prepend: site.baseurl }}"> 
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <link rel="stylesheet" type="text/css" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" type="text/css" href="{{ "/css/font-awesome-4.6.1/css/font-awesome.min.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | prepend: site.baseurl }}">
+  <script type="text/javascript" src="{{ "/js/jquery-2.2.3.min.js" | prepend: site.baseurl }}"></script>
+  <script type="text/javascript" src="http://youzikuwebfont.oss-cn-beijing.aliyuncs.com/api.lib.min.js"></script>
+</head>

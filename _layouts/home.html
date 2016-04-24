@@ -1,0 +1,34 @@
+{% include head.html %}
+<body class="homebody">
+{% include header.html %}
+{{ content }}
+	</div>
+</div>
+<div class="sidebar">
+  <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=280 height=210 src="http://music.163.com/outchain/player?type=0&id=365802806&auto=0&height=430"></iframe>
+  <div class="col-box-title name myFont">{{ site.author }}</div>
+  <p class="myFont">{{ site.profile }}</p>
+  <p class="contact">
+    {% if site.github_username %}
+    <a href="https://github.com/{{ site.github_username }}" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+    {% endif %}
+    {% if site.weibo_username %}
+    <a href="https://weibo.com/{{ site.weibo_username }}" target="_blank"><i class="fa fa-weibo" aria-hidden="true"></i></a>
+    {% endif %}
+    {% if site.twitter_username %}
+    <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+    {% endif %}
+    {% if site.email %}
+    <a href="mailto:{{ site.email }}"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+    {% endif %}
+  </p>
+
+  <div class="col-box-title myFont">Recent Article</div>
+  <ul class="post-list">
+    {% for post in site.posts limit:5 %}
+      <li><a class="post-link" href="{{ post.url | prepend: site.baseurl }}" target="_blank">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+{% include footer.html %}
+{% include foot.html %}

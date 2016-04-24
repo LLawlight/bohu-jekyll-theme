@@ -1,0 +1,44 @@
+# Site settings
+title: BoHu
+url: "http://zhaoyuxiang.cn/blog"    # the protocol and hostname of your site, eg. `http://zhaoyuxiang.cn/blog`
+baseurl: "/blog" # the prefix of your site uri, eg. `/bohu-jekyll-theme` or just one slash `/`
+#timezone: Asia/Shanghai
+description: 天道总司的个人博客网站,前端HTML、HTML5、CSS、CSS3、JavaScript、JQuery等编程经验总结分享。
+# Your information
+email: me@zhaoyuxiang.cn
+author: Clark #yourname #天道总司
+place: yourhometown #杭州
+domain: yourdoamain #互联网
+company: yourcompany #Jeeyoo
+position: yourjob #Technical Support
+school: yourschool #浙江科技学院
+major: yourmajoy #测控技术与仪器
+resume: "http://zhaoyuxiang.cn/cv"
+profile: Time is money. #yourmotto #聪明在于勤奋，天才在于积累。
+twitter_username: zyx19936688
+weibo_username:  zhaoyuxiang
+github_username:  Clark-Zhao
+
+# Comment Service (Disqus or 多说)
+#  choose one and un-comment the line to active it
+disqus_shortname: zhaoyuxiang   
+# get one: https://disqus.com/admin/signup/
+# duoshuo_shortname: clark-zhao  
+# get one: http://duoshuo.com/create-site/
+
+permalink: /archivers/:title
+gems:
+ - jekyll-paginate
+ - jekyll-gist
+ - jemoji
+
+# Build settings
+paginate: 2
+paginate_path: "/page:num"
+
+highlighter: rouge
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
